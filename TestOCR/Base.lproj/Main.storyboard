@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMx-GK-BIN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nk2-e4-8Nh"/>
+                                </constraints>
+                                <state key="normal" title="选择照片"/>
+                                <connections>
+                                    <action selector="selectImageButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhR-oJ-Ejn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOP-29-T9K">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nOP-29-T9K" secondAttribute="height" multiplier="1:1" id="jWS-yn-Wa3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pgS-BK-54z">
+                                <rect key="frame" x="0.0" y="384" width="320" height="184"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nOP-29-T9K" secondAttribute="trailing" id="1VF-NO-gsj"/>
+                            <constraint firstItem="iMx-GK-BIN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AQM-a6-1AL"/>
+                            <constraint firstAttribute="trailing" secondItem="pgS-BK-54z" secondAttribute="trailing" id="LgX-xr-Pac"/>
+                            <constraint firstItem="nOP-29-T9K" firstAttribute="top" secondItem="iMx-GK-BIN" secondAttribute="bottom" id="NbV-cP-svq"/>
+                            <constraint firstItem="pgS-BK-54z" firstAttribute="top" secondItem="nOP-29-T9K" secondAttribute="bottom" id="Snf-0s-xww"/>
+                            <constraint firstItem="pgS-BK-54z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aCO-L4-RKP"/>
+                            <constraint firstAttribute="trailing" secondItem="iMx-GK-BIN" secondAttribute="trailing" id="bTU-cP-Cg8"/>
+                            <constraint firstItem="nOP-29-T9K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cC8-S9-pDo"/>
+                            <constraint firstItem="iMx-GK-BIN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lzl-0K-37a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgS-BK-54z" secondAttribute="bottom" id="vPJ-oH-hc8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mImageView" destination="nOP-29-T9K" id="J6b-XA-PCt"/>
+                        <outlet property="mTextView" destination="pgS-BK-54z" id="nEI-7K-1E5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="300"/>
+        </scene>
+    </scenes>
+</document>
